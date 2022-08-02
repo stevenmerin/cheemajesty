@@ -1,0 +1,423 @@
+
+@font-face {
+  font-family: 'Arcadia';
+  src: url('Arcadia.woff2') format('woff2'), url('../fonts/Arcadia.eot') format('embedded-opentype'), url('../fonts/Arcadia.woff') format('woff'), url('../fonts/Arcadia.ttf') format('truetype'), url('../fonts/Arcadia.ttf') format('truetype'), url('../fonts/Arcadia.otf') format('opentype'), url('../fonts/Arcadia.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Animation for Logo */
+img.vert-move {
+  -webkit-animation: mover 1s infinite  alternate;
+  animation: mover 1s infinite  alternate;
+}
+img.vert-move {
+  -webkit-animation: mover 1s infinite  alternate;
+  animation: mover 1s infinite  alternate;
+}
+@-webkit-keyframes mover {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-30px); }
+}
+@keyframes mover {
+  0% {transform: translateY(0);}
+  100% {transform: translateY(-30px);}
+}
+
+@keyframes transitionIn {
+  from {
+    opacity: 0;
+    transform: rotateX(-10deg);
+  }
+  to {
+    opacity: 1;
+    transform: rotateX(0);
+  }
+}
+.fade-in {
+  opacity: 0;
+  transition: opacity 250ms ease-in;
+}
+.fade-in.appear {
+  opacity: 1;
+}
+
+.from-left {
+  -webkit-transform: translateX(-20%);
+  transform: translateX(-20%);
+}
+
+.from-right {
+  -webkit-transform: translateX(20%);
+  transform: translateX(20%);
+}
+
+.from-bottom {
+  -webkit-transform: translateY(20%);
+  transform: translateY(20%);
+}
+.from-top {
+  -webkit-transform: translateY(-20%);
+  transform: translateY(-20%);
+}
+.flip {
+  -webkit-transform: rotateX(180deg);
+  transform: rotateX(180deg);
+}
+.zoomOut {
+  -webkit-transform: scale(0.5);
+  transform: scale(0.5);
+}
+.from-left,
+.from-right,
+.from-bottom,
+.from-top,
+.zoomOut {
+  transition: opacity 250ms ease-in, -webkit-transform 400ms ease-in;
+  transition: opacity 250ms ease-in, transform 400ms ease-in;
+  transition: opacity 250ms ease-in, transform 400ms ease-in,
+    -webkit-transform 400ms ease-in;
+  opacity: 0;
+}
+
+.from-left.appear,
+.from-right.appear,
+.from-bottom.appear,
+.from-top.appear,
+.zoomOut.appear{ 
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  opacity: 1;
+}
+body {
+  /* background-color: #010008; */
+  /* background: radial-gradient(#3a2100 35%, #000);  */
+  background: radial-gradient(#000, #4b2b01); 
+}
+#navLogo {
+  width: 40%;
+  border-radius: 15px;
+  transition: all 0.7s; 
+}
+nav.active {
+  background: #311c00 !important;
+  transition: all 0.7s; 
+}
+nav ul a {
+  font-size: 1rem;
+  font-family: Arcadia, sans-serif;
+  color: #D7DADC;
+}
+nav a:hover {
+  background-image: linear-gradient(160deg, #ffe169, #edc531 30%, #cc2900); 
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight:800;
+  font-size: 1.2rem;
+}
+#liPos {
+  position: fixed;
+  right: 8%;/*pixels away from the right of the navbar*/
+}
+header {
+  height: 100vh;
+  position: relative;
+  /* background: radial-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.1)),
+  url("images/kingdom.jpg"); */
+  background: url("images/kingdom.jpg");
+  background-size: cover;
+  /* z-index: 1; */
+}
+#welcomeContent h1, h4 {
+  font-family: Arcadia, sans-serif;
+}
+#welcomeContent h4 {
+  color: #D7DADC;
+}
+#welcomeContent p {
+  line-height: 2;
+  color: #D7DADC;
+  font-weight: 700;
+  font-size: 1.1rem;
+  background: linear-gradient(rgba(56, 45, 5, 0.7), rgba(56, 45, 5, 0.7));
+  border-radius: 15px;
+}
+#pictureBg {
+  position: absolute;
+  /* z-index: 2; */
+  width: 100%; 
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.4;
+}
+#welcomeContent {
+  padding-top: 1%;
+}
+span {
+  background-image: linear-gradient(160deg, #ffe169, #edc531 20%, #cc2900); 
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#labelContent {
+  color: #ffe169;
+  font-weight: 500;
+  font-size: 1.2rem;
+  padding: 5% 0 0 5%;
+  margin-bottom: 5%;
+}
+#aboutUs {
+  padding: 15% 0;
+}
+#aboutUs h5 {
+  line-height: 2;
+  font-family: Arcadia, sans-serif;
+}
+#aboutUs p {
+  color: #D7DADC;
+  line-height: 2;
+  text-align: justify;
+  margin-left: 15%;
+  margin-top: 11%;
+  font-size: 1.1rem;
+}
+#flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+#flex h5 {
+  color: #edc531;
+  font-family: Arcadia, sans-serif;
+}
+#flex p { 
+  color: #D7DADC;
+  text-align: justify;
+  line-height: 2;
+}
+.boxContainer {
+  background:
+  linear-gradient(#ffe169,#ffe16b)   0 0,
+  linear-gradient(#ffe169,#ffe169)   0 0;
+  background-size: 20px 3px, 3px 20px;
+  background-origin:content-box;
+  background-repeat:no-repeat;
+}
+.feautureBox {
+  /* background: linear-gradient(to bottom right,rgba(204, 41, 0, 0.3), rgba(28, 98, 121, 0.2)); */
+  background: linear-gradient(to bottom right,rgba(237, 197, 49, 0.2), rgba(204, 41, 0, 0.2));
+  /* background: #420008; */
+  padding: 40px 40px !important;
+  margin-bottom: 40px;
+  border-radius: 20px;
+}
+#featuresHeader, #tokenomicsHeader, #roadmapHeader, #officialTeam {
+  font-family: Arcadia, sans-serif;
+}
+#tokenomicsSection {
+  margin-top: 10%;
+}
+.boxContainer2 {
+  color: #D7DADC;
+  margin: 0 7%;
+  background:
+  linear-gradient(#cc2900,#cc2900)   0 0,
+  linear-gradient(#cc2900,#cc2900)   0 0,
+  linear-gradient(#cc2900,#cc2900) 100% 100%,
+  linear-gradient(#cc2900,#cc2900) 100% 100%;
+
+  background-size: 25px 3px, 3px 25px;
+  background-origin:content-box;
+  background-repeat:no-repeat;
+  box-shadow: inset 0 0 35px -10px #ffe169;
+  border-radius: 5px;
+  transition: background 0.7s ease-out;
+}
+.boxContainer2:hover {
+  background:
+  linear-gradient(#cc2900,#cc2900)   100% 100%,
+  linear-gradient(#cc2900,#cc2900)  100% 100%,
+  linear-gradient(#cc2900,#cc2900)  0 0,
+  linear-gradient(#cc2900,#cc2900)  0 0;
+
+  background-size: 25px 3px, 3px 25px;
+  background-origin:content-box;
+  background-repeat:no-repeat;
+  box-shadow: inset 0 0 40px -15px #edc531;
+  transition: background 0.7s ease-out;
+}
+
+.boxContainer2 p {
+  padding: 15% 15%;
+  line-height: 2;
+  font-size: 1.1rem;
+}
+.boxContainer2 b {
+  font-size: 1.5rem;
+}
+#roadmapSection {
+  margin-top: 10%;
+  margin-bottom: 5%;
+}
+#roadmapSection p {
+  color: #D7DADC;
+  text-align: justify;
+  line-height: 2;
+  padding: 5% 5% 0 5%;
+  font-size: 1.1rem;
+}
+#roadmapLogo {
+  border-radius: 15px;
+}
+#officialTeamSection {
+  margin-bottom: 5%;
+}
+#officialTeamSection h5 {
+  font-weight: 500;
+  /* padding-bottom: 5%; */
+  margin-top: 0%;
+}
+.officialTeamPics {
+  width: 300px;
+  height: 300px;
+  /* margin-top: 5%; */
+  border-radius: 15px;
+}
+.officialTeamPics:hover {
+  border: solid 2px #aa8a15;
+}
+.memberTitle {
+  color: #edc531;
+  font-weight: 500;
+  margin-top: -2%;
+}
+.page-footer {
+  background-color: #221700;
+  color: #D7DADC ;
+}
+.page-footer p {
+  font-size: 1rem;
+  line-height: 2;
+}
+.page-footer a:hover {
+  transform: scale(1.2);
+}
+
+/* Media Queries */
+
+/* Large screens  */
+@media only screen  and (min-width : 1824px) {
+  #welcomeContent {
+    padding-top: 9%;
+  }
+  #aboutUs h5 {
+    font-size: 2.1rem;
+  }
+  #navLogo {
+    width: 65%;
+  }
+  #liPos {
+    /* padding-left: 50%; */
+    position: fixed;
+    right: 15%; /*pixels away from the right of the navbar*/
+  }
+}
+
+/* For Proper Box Spacing */
+@media only screen and (min-width: 993px) {
+  #featureSection .row .col.l4:nth-child(3) {
+    margin-right: auto;
+  }
+  #featureSection .row .col.l4:nth-child(4) {
+    margin-right: 68%;
+  }
+  #featureSection .row .col.l4 {
+    width: 29.3333333333%;
+  }
+}
+
+/* Mobile Screens */
+@media screen and (max-width: 600px) { 
+  .sidenav li > a {
+    color: #edc531;
+    text-align: center;
+    font-weight: 800;
+    font-family: Arcadia, sans-serif;
+  }
+  .sidenav li:first-child {
+    margin-top: 20px;
+  }
+  .sidenav {
+    background: radial-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9));
+    background-size: 50%;
+    height: auto; 
+    width: 100%;
+    top: auto;
+    padding: 0;
+  }
+  #navLogo {
+    width: 50%;
+  }
+  #flex.row .col.s12 {
+    margin: 25px;
+  }
+  header {
+    height: auto;
+    /* background-size: contain;
+    background-repeat: no-repeat; */
+  }
+  #welcomeContent {
+    padding: 10% 10%;
+  }
+  #welcomeContent h1 {
+    font-size: 2.5rem;
+  }
+  #welcomeContent h4 {
+    font-size: 1.28rem;
+  }
+  #welcomeContent p {
+    font-size: 0.9rem;
+  }
+  #labelContent {
+    font-size: 1rem;
+  }
+  #aboutUs h5 {
+    font-size: 1.1rem;
+    line-height: 2.5;
+  }
+  #aboutUs p {
+    line-height: 2;
+    margin-left: 0;
+    margin-top: 11%;
+    font-size: 0.9rem;
+  }
+  #featuresHeader, #tokenomicsHeader, #roadmapHeader, #officialTeam{
+    font-size: 2.36rem;
+  }
+  #flex h5 {
+    font-size: 1.5rem;
+  }
+  #flex p {
+    font-size: 0.9rem;
+  }
+  .boxContainer2 p {
+    font-size: 0.9rem;
+  }
+  .boxContainer2 b {
+    font-size: 1.2rem;
+  }
+  #roadmapSection p {
+    padding: 5% 5% 5% 5%;
+  }
+  nav .brand-logo {
+    text-align: center;
+  }
+  #officialTeamSection h5 {
+    margin-bottom: 12%;
+  }
+  .memberTitle {
+    margin-top: -12%;
+    margin-bottom: 12%;
+  }
+}
